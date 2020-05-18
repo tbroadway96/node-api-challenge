@@ -49,7 +49,6 @@ actionsRouter.get('/:id/actions/:i', async (req, res) => {
 
 //UPDATE
 actionsRouter.put('/:id/actions/:i', async (req, res) => {
-    console.log(req.params);
     const id = req.params.i;
     const description = req.body.description;
     const notes = req.body.notes;
@@ -69,7 +68,7 @@ actionsRouter.put('/:id/actions/:i', async (req, res) => {
 
 //DELETE
 actionsRouter.delete('/:id/actions/:i', async (req, res) => {
-    const id = req.params.id;
+    const id = req.params.i;
 
     const deleted = await actions.remove(id);
 
