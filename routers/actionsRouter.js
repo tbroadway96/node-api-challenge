@@ -5,14 +5,14 @@ const actionsRouter = express.Router();
 
 //CREATE
 actionsRouter.post('/:id/actions', async (req, res) => {
-    const { description, notes } = req.body;
-    const project_id = req.params.id;
+    const body = req.body;
+    body.project_id = req.params.id;
 
-    if (!description || !notes) {
+    if (!body.description || !body.notes) {
         res.status(500).json({ message: 'You must provide a description and note.' });
     } else {
         try {
-            const action = await actions.insert({project_id, notes, description });
+            const action = await actions.insert(body);
             if (action) {
                 res.status(201).json(action);
             }
