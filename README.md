@@ -40,13 +40,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+I learned that it has built in routing, but you can use .Router to build more custom routes. I also learned that because express in minimalist, you sometimes need to write your own custom middleware to do things like logging.
+
 - [ ] Describe Middleware?
+
+Middleware is code that is used to extend the functionality of express. Because express is lightweight and minimal, it doesn't have some features that developers would like/need. Devs can write their own middleware and use it to add capabilities.
 
 - [ ] Describe a Resource?
 
+A resource is basically an entry in a database.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+It can return a 200 status code and a json object.
+
 - [ ] How can we partition our application into sub-applications?
+
+Using CommonJS syntax (module.exports and require) to make our app modular.
 
 ## Minimum Viable Product
 
